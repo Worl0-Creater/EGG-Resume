@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>但佳玥 · 简历</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #e2e8f0;
+            font-family: 'Segoe UI', 'Roboto', 'Noto Sans', system-ui, -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            line-height: 1.45;
+            color: #0f172a;
+            padding: 40px 24px;
+        }
+
+        /* 纸张容器 */
+        .resume {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            transition: all 0.2s;
+        }
+
+        /* 左右分栏布局 (桌面) */
+        .resume-grid {
+            display: grid;
+            grid-template-columns: 34% 66%;
+        }
+
+        /* ========= 左侧样式 (深邃冷静) ========= */
+        .sidebar {
+            background: #1e293b;
+            color: #f1f5f9;
+            padding: 2rem 1.6rem;
+            height: 100%;
+        }
+
+        /* 头像区 (模拟证件照占位) */
+        .avatar-placeholder {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .avatar-icon {
+            width: 110px;
+            height: 110px;
+            background: #334155;
+            border-radius: 50%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid #94a3b8;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .avatar-icon span {
+            font-size: 3rem;
+            font-weight: 400;
+            color: #cbd5e1;
+        }
+        .avatar-caption {
+            font-size: 0.7rem;
+            color: #94a3b8;
+            margin-top: 8px;
+        }
+
+        .section-title {
+            font-size: 1.05rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            border-left: 4px solid #facc15;
+            padding-left: 12px;
+            margin: 1.5rem 0 1rem 0;
+            color: #facc15;
+            text-transform: uppercase;
+        }
+        .section-title:first-of-type {
+            margin-top: 0;
+        }
+
+        .personal-detail p {
+            margin-bottom: 8px;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            color: #e2e8f0;
+        }
+        .personal-detail strong {
+            color: #facc15;
+            font-weight: 500;
+            min-width: 65px;
+        }
+
+        .contact-info {
+            margin-top: 10px;
+        }
+        .contact-info p {
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+            word-break: break-all;
+        }
+
+        .skill-item {
+            margin-bottom: 1rem;
+        }
+        .skill-cat {
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: #facc15;
+            margin-bottom: 4px;
+        }
+        .skill-desc {
+            font-size: 0.8rem;
+            color: #cbd5e6;
+            line-height: 1.4;
+        }
+
+        .lang-item, .cert-item {
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+            color: #e2e8f0;
+        }
+
+        /* 右侧样式 */
+        .main-content {
+            background: white;
+            padding: 2rem 2rem 2rem 1.8rem;
+        }
+
+        .name-title {
+            border-bottom: 3px solid #facc15;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+        .main-content h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #0f172a;
+            letter-spacing: 1px;
+        }
+        .subhead {
+            color: #334155;
+            margin-top: 8px;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            border-left: 3px solid #facc15;
+            padding-left: 12px;
+            background: #f8fafc;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .right-section {
+            margin-bottom: 1.6rem;
+        }
+        .right-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0f172a;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 5px;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        .right-title span {
+            background: #facc15;
+            width: 8px;
+            height: 8px;
+            display: inline-block;
+            border-radius: 2px;
+            margin-right: 10px;
+        }
+
+        .timeline-item {
+            margin-bottom: 1.4rem;
+        }
+        .item-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 6px;
+        }
+        .item-title {
+            font-weight: 700;
+            font-size: 1rem;
+            color: #1e293b;
+        }
+        .item-sub {
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: #facc15;
+        }
+        .item-date {
+            font-size: 0.75rem;
+            color: #64748b;
+            background: #f1f5f9;
+            padding: 2px 8px;
+            border-radius: 20px;
+        }
+        .item-desc {
+            font-size: 0.85rem;
+            color: #334155;
+            margin-top: 6px;
+            padding-left: 0px;
+            list-style-position: inside;
+        }
+        .item-desc li {
+            margin-bottom: 5px;
+            line-height: 1.4;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .item-desc li::before {
+            content: "▹";
+            color: #facc15;
+            font-weight: bold;
+            display: inline-block;
+            width: 1.2rem;
+        }
+
+        .inline-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 5px;
+        }
+        .badge {
+            background: #f1f5f9;
+            color: #0f172a;
+            font-size: 0.7rem;
+            padding: 4px 10px;
+            border-radius: 30px;
+        }
+
+        hr {
+            margin: 16px 0;
+            border: 0;
+            height: 1px;
+            background: #e2e8f0;
+        }
+
+        /* 响应式 */
+        @media (max-width: 750px) {
+            .resume-grid {
+                grid-template-columns: 1fr;
+            }
+            body {
+                padding: 16px;
+            }
+            .sidebar {
+                padding: 1.5rem;
+            }
+            .main-content {
+                padding: 1.5rem;
+            }
+            .item-header {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+                margin: 0;
+            }
+            .resume {
+                box-shadow: none;
+                border-radius: 0;
+                max-width: 100%;
+            }
+            .sidebar {
+                background: #1e293b;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .badge, .item-date {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .avatar-icon {
+                border: 2px solid #aaa;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="resume">
+    <div class="resume-grid">
+        <!-- 左侧栏：个人信息 + 技能证书 -->
+        <aside class="sidebar">
+            <div class="avatar-placeholder">
+                <div class="avatar-icon">
+                    <span>📷</span>
+                </div>
+                <div class="avatar-caption">证件照</div>
+            </div>
+            <div class="personal-detail">
+                <p><strong>姓名</strong> 但佳玥</p>
+                <p><strong>民族</strong> 汉</p>
+                <p><strong>出生</strong> 2004.05</p>
+                <p><strong>政治面貌</strong> 群众</p>
+                <p><strong>毕业院校</strong> 南京邮电大学</p>
+            </div>
+            <div class="section-title">联系方式</div>
+            <div class="contact-info">
+                <p>📞 15895869892</p>
+                <p>📧 15895869892@163.com</p>
+                <p>📍 江苏省南京市</p>
+            </div>
+
+            <div class="section-title">教育背景</div>
+            <div style="margin-bottom: 0.5rem;">
+                <div style="font-weight: 600; font-size: 0.9rem;">南京邮电大学</div>
+                <div style="font-size: 0.8rem; color: #cbd5e1;">光电信息科学与工程专业 · 2022.09-2026.06</div>
+                <div style="font-size: 0.75rem; margin-top: 5px; background: #334155; padding: 4px 8px; border-radius: 12px; display: inline-block;">📊 GPA位列专业前25%</div>
+            </div>
+
+            <div class="section-title">技能证书</div>
+            <div class="skill-item">
+                <div class="skill-cat">💻 办公软件</div>
+                <div class="skill-desc">熟练使用 Office，文档排版、表格处理、PPT制作</div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-cat">📊 数据处理</div>
+                <div class="skill-desc">MATLAB、Python 基础，简单数据分析与处理</div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-cat">🌐 英语能力</div>
+                <div class="skill-desc">CET-4 / CET-6 · 英文资料阅读 & 听说读写良好</div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-cat">🗣️ 普通话</div>
+                <div class="skill-desc">二级甲等</div>
+            </div>
+            <div class="section-title">荣誉 & 竞赛</div>
+            <div class="lang-item">🏅 校级电子联赛一等奖</div>
+            <div class="lang-item">🎙️ 广播站品牌播放量10w+</div>
+        </aside>
+
+        <!-- 右侧主内容：实习/校园/项目经历 -->
+        <main class="main-content">
+            <h1>但佳玥</h1>
+            <div class="subhead">光电信息科学与工程 | 软件测试/综合事务/项目协作 · 2026届本科</div>
+
+            <!-- 实习经历 -->
+            <div class="right-section">
+                <div class="right-title"><span></span>实习经历</div>
+                
+                <div class="timeline-item">
+                    <div class="item-header">
+                        <div class="item-title">云南深为企业管理咨询有限公司 · 软件测试实习生（技术部）</div>
+                        <div class="item-date">2026.01 – 2026.02</div>
+                    </div>
+                    <ul class="item-desc">
+                        <li>参与软件测试与网络通信实践，学习Socket编程、TCP/IP协议及多线程开发基础内容</li>
+                        <li>配合完成通信功能测试、流程验证及问题排查，深入理解网络程序连接、收发与并发处理机制</li>
+                        <li>协助整理测试过程资料与技术文档，提升软件测试、问题分析与技术学习能力</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="item-header">
+                        <div class="item-title">汉中市南郑区向阳社区管理委员会 · 综合事务实习生</div>
+                        <div class="item-date">2025.07 – 2025.09</div>
+                    </div>
+                    <ul class="item-desc">
+                        <li>参与办公文案写作、宣传报道、文档图像编辑及数字化资料处理，支持社区日常宣传与信息化事务</li>
+                        <li>协助单位通讯网络维护、信息传输发送及平台基础管理，积累行政支持与信息处理经验</li>
+                        <li>负责居民来访接待、电话接听及事务分流，协助社会事务办理与政策宣传</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="item-header">
+                        <div class="item-title">汉中市南郑区胡家营镇人民政府 · 办公室综合岗实习生</div>
+                        <div class="item-date">2024.07 – 2024.09</div>
+                    </div>
+                    <ul class="item-desc">
+                        <li>协助完成文件收发归档、资料打印复印及会议通知安排等日常行政工作</li>
+                        <li>参与宣传报道撰写、信息数据处理传输及设备基础维护，支持单位宣传与资料管理工作</li>
+                        <li>多事务并行场景下跨岗位配合，积累行政支持、信息处理与服务协同经验</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="item-header">
+                        <div class="item-title">陕西省汉中市南郑区教育体育局 · 办公室综合事务实习生</div>
+                        <div class="item-date">2023.07 – 2023.08</div>
+                    </div>
+                    <ul class="item-desc">
+                        <li>协助完成文件复印、资料传递、档案查找等日常事务处理工作</li>
+                        <li>配合开展会议通知、会场布置及行政协作事务，保障日常工作有序推进</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 校园经历 -->
+            <div class="right-section">
+                <div class="right-title"><span></span>校园经历</div>
+                <div class="timeline-item">
+                    <div class="item-header">
+                        <div class="item-title">南京邮电大学广播站 · 副部长</div>
+                        <div class="item-date">2022.09 – 2024.06</div>
+                    </div>
+                    <ul class="item-desc">
+                        <li>负责“南邮之声”线上播客品牌策划与运营，推动节目内容产出与传播，累计播放量超10万</li>
+                        <li>组织“广播开放日”等线下活动，完成活动策划、宣传推广与现场统筹，吸引500余名校内学生参与报名</li>
+                        <li>参与校媒40周年纪念活动策划与资源对接，搭建在校生与往届成员交流平台，协助拓展外部资源支持部门发展</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <div class="item-header">
+                        <div class="item-title">班级心理委员</div>
+                        <div class="item-date">2022.09 – 至今</div>
+                    </div>
+                    <ul class="item-desc">
+                        <li>协助辅导员开展班级日常管理、信息传达与学生沟通协调工作</li>
+                        <li>参与班级问题反馈、活动组织与氛围建设，提升班级协作效率与支持性环境</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 项目经历 -->
+            <div class="right-section">
+                <div class="right-title"><span></span>项目经历</div>
+                <div class="timeline-item">
+                    <div class="item-header">
+                        <div class="item-title">导师实验室项目 · 光电系统交互方向</div>
+                    </div>
+                    <div class="item-desc" style="list-style: none; margin-left: 0;">
+                        参与UI界面设计，结合用户使用场景梳理交互流程与界面优化，初步掌握以用户为中心的设计思路。
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="item-header">
+                        <div class="item-title">EDA课程项目</div>
+                    </div>
+                    <div class="item-desc" style="list-style: none;">
+                        使用EDA工具完成电路原理图设计、PCB布局与基础调试，具备硬件开发与问题排查能力。
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="item-header">
+                        <div class="item-title">竞赛经历 · 校科协电子技术训练</div>
+                    </div>
+                    <div class="item-desc" style="list-style: none;">
+                        参与校科协电子技术学习与竞赛训练，获校级电子联赛一等奖。
+                    </div>
+                </div>
+            </div>
+
+            <!-- 自我评价 / 额外能力 -->
+            <div class="right-section">
+                <div class="right-title"><span></span>自我评价</div>
+                <div style="font-size: 0.85rem; color: #334155; background: #f8fafc; padding: 12px 14px; border-radius: 16px; line-height: 1.5;">
+                    具备理工科背景与较强执行意识，拥有技术测试、校园媒体运营、活动组织及行政事务协助等实践经验。做事认真细致，适应能力较强，能够胜任综合事务、运营支持、项目协作及初级技术支持类岗位。
+                </div>
+            </div>
+            <hr />
+            <div style="font-size: 0.7rem; text-align: center; color: #94a3b8;">更新于 2025 · 南京邮电大学 | 光电信息科学与工程</div>
+        </main>
+    </div>
+</div>
+</body>
+</html>

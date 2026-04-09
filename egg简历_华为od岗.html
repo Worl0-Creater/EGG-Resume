@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>但佳玥｜软件测试岗参考简历</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #eef2f7;
+      font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+      color: #1f2937;
+      line-height: 1.55;
+    }
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 24px auto;
+      background: #ffffff;
+      box-shadow: 0 14px 40px rgba(15, 23, 42, 0.12);
+      padding: 22mm 16mm 16mm;
+      position: relative;
+    }
+    .topbar {
+      display: grid;
+      grid-template-columns: 1fr 34mm;
+      gap: 18px;
+      align-items: start;
+      border-bottom: 2px solid #d7e3f4;
+      padding-bottom: 14px;
+    }
+    .name-row {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .name {
+      font-size: 28px;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: 1px;
+    }
+    .job {
+      font-size: 14px;
+      color: #1d4ed8;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+    }
+    .meta {
+      margin-top: 10px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 4px 18px;
+      font-size: 13px;
+      color: #334155;
+    }
+    .meta span strong { color: #0f172a; }
+    .photo {
+      width: 34mm;
+      height: 46mm;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #f8fafc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .summary {
+      margin-top: 12px;
+      font-size: 13px;
+      color: #334155;
+      background: #f8fbff;
+      border: 1px solid #dbeafe;
+      padding: 10px 12px;
+      border-radius: 8px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 68mm 1fr;
+      gap: 18px;
+      margin-top: 16px;
+    }
+    .section {
+      margin-bottom: 14px;
+    }
+    .section-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: #0f172a;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #dbe4f0;
+      margin-bottom: 10px;
+      letter-spacing: 0.3px;
+    }
+    .side-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 10px 12px;
+      margin-bottom: 10px;
+    }
+    .side-card-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 6px;
+    }
+    .side-list, .bullet-list {
+      margin: 0;
+      padding-left: 18px;
+    }
+    .side-list li, .bullet-list li {
+      margin-bottom: 5px;
+      font-size: 12.5px;
+      color: #334155;
+    }
+    .edu-box {
+      background: #fbfdff;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid #2563eb;
+      border-radius: 10px;
+      padding: 10px 12px;
+    }
+    .school {
+      font-size: 16px;
+      font-weight: 800;
+      color: #0f172a;
+    }
+    .major {
+      margin-top: 3px;
+      font-size: 13px;
+      color: #334155;
+    }
+    .submeta {
+      margin-top: 4px;
+      font-size: 12px;
+      color: #64748b;
+    }
+    .entry {
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px dashed #dbe4f0;
+    }
+    .entry:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+    .entry-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: flex-start;
+      margin-bottom: 6px;
+    }
+    .entry-title {
+      font-size: 15px;
+      font-weight: 800;
+      color: #0f172a;
+    }
+    .entry-subtitle {
+      font-size: 13px;
+      color: #2563eb;
+      margin-top: 2px;
+      font-weight: 700;
+    }
+    .entry-time {
+      font-size: 12px;
+      color: #64748b;
+      white-space: nowrap;
+      font-weight: 700;
+    }
+    .timeline-card {
+      background: #fcfdff;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 10px 12px;
+      margin-bottom: 10px;
+    }
+    .timeline-time {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      color: #1d4ed8;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 999px;
+      padding: 2px 8px;
+      margin-bottom: 6px;
+    }
+    .timeline-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 4px;
+    }
+    .timeline-stack {
+      font-size: 12px;
+      color: #64748b;
+      margin-bottom: 6px;
+    }
+    .tag-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+    }
+    .tag {
+      font-size: 11px;
+      color: #1e3a8a;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 999px;
+      padding: 2px 8px;
+    }
+    .small-note {
+      font-size: 11px;
+      color: #64748b;
+      margin-top: 10px;
+      border-top: 1px dashed #dbe4f0;
+      padding-top: 8px;
+    }
+    @media print {
+      body { background: #ffffff; }
+      .page { margin: 0; box-shadow: none; }
+    }
+    @media (max-width: 900px) {
+      .page {
+        width: 100%;
+        min-height: auto;
+        margin: 0;
+        padding: 18px;
+      }
+      .grid, .topbar {
+        grid-template-columns: 1fr;
+      }
+      .photo {
+        width: 120px;
+        height: 160px;
+      }
+      .meta {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <section class="topbar">
+      <div>
+        <div class="name-row">
+          <div class="name">但佳玥</div>
+          <div class="job">软件测试工程师｜2026届校招参考版</div>
+        </div>
+        <div class="meta">
+          <span><strong>电话：</strong>15895869892</span>
+          <span><strong>邮箱：</strong>15895869892@163.com</span>
+          <span><strong>所在地：</strong>江苏省南京市</span>
+          <span><strong>求职意向：</strong>软件测试 / 测试开发</span>
+          <span><strong>毕业院校：</strong>南京邮电大学</span>
+          <span><strong>毕业时间：</strong>2026.06</span>
+          <span><strong>专业：</strong>光电信息科学与工程</span>
+          <span><strong>成绩排名：</strong>前25%</span>
+        </div>
+        <div class="summary">
+          具备 Python 测试脚本编写、接口测试、自动化测试、Linux 日志排查、SQL 数据校验能力；可使用 pytest、Postman、Fiddler / Charles、Git、禅道 / JIRA 完成测试执行、缺陷跟踪与文档输出。拥有软件测试实习与自研测试项目经历，适配华为 OD 等校招测试类岗位的技术面试与简历筛选场景。
+        </div>
+      </div>
+      <div>
+        <div class="photo" title="证件照来自 GitHub 仓库，可继续替换为本地上传图片版本">
+          <img alt="但佳玥证件照" src="https://raw.githubusercontent.com/Worl0-Creater/EGG-Resume/main/passport_photo.png" />
+        </div>
+        <div style="margin-top:8px;font-size:11px;color:#64748b;line-height:1.45;word-break:break-all;">
+          照片/仓库：<a href="https://github.com/Worl0-Creater/EGG-Resume" target="_blank" style="color:#2563eb;text-decoration:none;">GitHub - Worl0-Creater/EGG-Resume</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <aside>
+        <div class="section">
+          <div class="section-title">技术技能</div>
+          <div class="side-card">
+            <div class="side-card-title">测试工具链</div>
+            <ul class="side-list">
+              <li>pytest：参数化、断言、fixture、用例组织</li>
+              <li>Postman：环境变量、断言脚本、集合测试</li>
+              <li>Fiddler / Charles：HTTP 抓包与请求响应分析</li>
+              <li>禅道 / JIRA：缺陷提报、跟踪与闭环管理</li>
+            </ul>
+          </div>
+          <div class="side-card">
+            <div class="side-card-title">技术能力</div>
+            <ul class="side-list">
+              <li>Python：函数、类、异常处理、文件读写、脚本开发</li>
+              <li>接口测试：requests、状态码校验、响应断言、数据驱动</li>
+              <li>Linux：ls、grep、tail、ps、netstat、日志排查</li>
+              <li>SQL：SELECT、WHERE、JOIN、GROUP BY 数据验证</li>
+              <li>Git：基础版本管理与代码同步</li>
+            </ul>
+          </div>
+          <div class="side-card">
+            <div class="side-card-title">语言与证书</div>
+            <ul class="side-list">
+              <li>CET-4 / CET-6，可阅读英文技术文档</li>
+              <li>普通话二级甲等</li>
+              <li>ISTQB：可根据真实情况补充“备考中/已通过”</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">教育背景</div>
+          <div class="edu-box">
+            <div class="school">南京邮电大学</div>
+            <div class="major">光电信息科学与工程</div>
+            <div class="submeta">2022.09 - 2026.06 ｜ GPA / 排名：前25%</div>
+            <ul class="side-list" style="margin-top:8px;">
+              <li>自修：数据结构、数据库、计算机网络、软件测试基础</li>
+              <li>具备理工科分析能力与较强的学习迁移能力</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">校园经历</div>
+          <div class="side-card">
+            <div class="side-card-title">南京邮电大学广播站｜副部长</div>
+            <ul class="side-list">
+              <li>负责“南邮之声”播客内容策划与运营，累计播放量超 10 万</li>
+              <li>统筹“广播开放日”等活动，吸引 500+ 学生报名参与</li>
+              <li>沉淀跨团队沟通、需求协调与文档输出能力</li>
+            </ul>
+          </div>
+          <div class="side-card">
+            <div class="side-card-title">班级心理委员</div>
+            <ul class="side-list">
+              <li>协助辅导员进行信息传达、问题反馈与班级沟通协调</li>
+              <li>具备较好的责任心、沟通能力与执行稳定性</li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+
+      <main>
+        <div class="section">
+          <div class="section-title">实习经历</div>
+
+          <div class="entry">
+            <div class="entry-head">
+              <div>
+                <div class="entry-title">云南深为企业管理咨询有限公司</div>
+                <div class="entry-subtitle">软件测试实习生｜技术部</div>
+              </div>
+              <div class="entry-time">2026.01 - 2026.02</div>
+            </div>
+            <ul class="bullet-list">
+              <li>参与网络通信相关系统测试，围绕连接建立、消息收发、异常处理与并发场景执行功能测试、接口验证与回归测试，累计编写 / 整理 <strong>20+</strong> 条测试用例。</li>
+              <li>使用 Postman 对核心接口进行参数校验、返回值断言与异常场景验证，结合抓包工具和日志分析定位问题，累计发现并提交 <strong>6+</strong> 个有效缺陷。</li>
+              <li>基于 Python 与 pytest 参与自动化测试脚本整理，协助完成测试数据维护、结果记录与测试报告输出，支持团队回归测试效率提升约 <strong>30%</strong>。</li>
+              <li>配合开发与测试同事完成缺陷复现、问题跟踪和文档沉淀，形成测试记录、Bug 跟踪表与阶段性总结材料。</li>
+            </ul>
+            <div class="tag-wrap">
+              <span class="tag">Postman</span>
+              <span class="tag">pytest</span>
+              <span class="tag">Linux</span>
+              <span class="tag">Socket / TCP-IP</span>
+              <span class="tag">日志排查</span>
+              <span class="tag">缺陷跟踪</span>
+            </div>
+          </div>
+
+          <div class="entry">
+            <div class="entry-head">
+              <div>
+                <div class="entry-title">汉中市南郑区向阳社区管理委员会</div>
+                <div class="entry-subtitle">综合事务实习生</div>
+              </div>
+              <div class="entry-time">2025.07 - 2025.09</div>
+            </div>
+            <ul class="bullet-list">
+              <li>参与文档数字化处理、信息传输与平台基础维护，提升文档规范化与资料整理能力。</li>
+              <li>承担居民接待、事务分流和宣传支持工作，强化沟通协作、问题记录和执行闭环意识。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">项目经历（按时间轴重构）</div>
+
+          <div class="timeline-card">
+            <div class="timeline-time">2025.09 - 2025.12</div>
+            <div class="timeline-title">基于 Python + pytest 的接口自动化测试框架</div>
+            <div class="timeline-stack">技术栈：Python / pytest / requests / Postman / HTMLTestRunner / Git</div>
+            <ul class="bullet-list">
+              <li>针对模拟业务系统核心接口搭建自动化测试框架，完成环境配置、测试数据管理、公共方法封装、断言机制与测试报告生成。</li>
+              <li>覆盖登录、用户查询、数据新增、权限校验等 <strong>5+</strong> 个核心接口，设计并执行 <strong>15+</strong> 个测试场景，包含正常流、边界值与异常流验证。</li>
+              <li>通过数据驱动方式组织测试用例，自动生成 HTML 测试报告，回归执行时间较手工方式缩短约 <strong>40%</strong>。</li>
+              <li>项目可作为校招技术面试深挖项目，后续可补充 GitHub 仓库链接、README 与报告截图。</li>
+            </ul>
+            <div class="tag-wrap">
+              <span class="tag">接口自动化</span>
+              <span class="tag">数据驱动</span>
+              <span class="tag">测试报告</span>
+              <span class="tag">GitHub 可补充</span>
+            </div>
+          </div>
+
+          <div class="timeline-card">
+            <div class="timeline-time">2025.03 - 2025.06</div>
+            <div class="timeline-title">Web 管理系统功能 / 接口测试项目</div>
+            <div class="timeline-stack">技术栈：Postman / Fiddler / Linux / SQL / 禅道</div>
+            <ul class="bullet-list">
+              <li>围绕后台管理系统的账号、权限、查询、数据录入等模块设计测试用例，执行功能测试、接口测试与回归测试。</li>
+              <li>结合抓包与日志分析验证前后端请求参数、状态码与返回数据一致性，完成 <strong>20+</strong> 条测试用例执行与结果记录。</li>
+              <li>使用 SQL 对关键业务数据进行校验，独立提交 <strong>8</strong> 个有效 Bug，其中包含逻辑缺陷、边界校验缺陷与异常提示缺陷。</li>
+              <li>输出测试报告、缺陷跟踪表与复测记录，为后续迭代版本提供基础质量数据支持。</li>
+            </ul>
+            <div class="tag-wrap">
+              <span class="tag">功能测试</span>
+              <span class="tag">接口测试</span>
+              <span class="tag">SQL 校验</span>
+              <span class="tag">禅道 / JIRA</span>
+            </div>
+          </div>
+
+          <div class="timeline-card">
+            <div class="timeline-time">2024.10 - 2025.01</div>
+            <div class="timeline-title">测试工具链学习与脚本实践</div>
+            <div class="timeline-stack">学习重点：pytest / requests / Postman / Linux / MySQL / Git</div>
+            <ul class="bullet-list">
+              <li>系统学习 Python 测试脚本编写、Postman 接口调试、Linux 常用命令与 SQL 数据校验，为后续项目与实习奠定技术基础。</li>
+              <li>围绕登录接口、查询接口等典型场景完成脚本练习与手工测试验证，逐步建立“用例设计—执行—缺陷记录—复测”的测试闭环意识。</li>
+              <li>形成可复用的测试学习笔记、命令清单与常见问题排查表，便于面试复盘与技能巩固。</li>
+            </ul>
+            <div class="tag-wrap">
+              <span class="tag">基础补齐</span>
+              <span class="tag">面试准备</span>
+              <span class="tag">测试闭环</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">其他项目与竞赛</div>
+          <div class="entry">
+            <div class="entry-head">
+              <div>
+                <div class="entry-title">导师实验室项目（光电系统交互方向）</div>
+                <div class="entry-subtitle">交互流程梳理 / 界面优化参与</div>
+              </div>
+              <div class="entry-time">2024.03 - 2024.06</div>
+            </div>
+            <ul class="bullet-list">
+              <li>参与光电系统交互项目的界面梳理与用户场景分析，强化了需求理解、流程拆解和界面逻辑表达能力。</li>
+            </ul>
+          </div>
+          <div class="entry">
+            <div class="entry-head">
+              <div>
+                <div class="entry-title">EDA 课程项目 / 电子竞赛训练</div>
+                <div class="entry-subtitle">电路设计、问题排查与工程实践</div>
+              </div>
+              <div class="entry-time">2023.09 - 2024.06</div>
+            </div>
+            <ul class="bullet-list">
+              <li>完成电路原理图设计、PCB 布局与基础调试，获得校级电子联赛一等奖，体现工程学习能力与问题排查能力。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="small-note">
+          
+        </div>
+      </main>
+    </section>
+  </div>
+</body>
+</html>
